@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap');
+
+/* ── Design Tokens ─────────────────────────────── */
+:root {
+  --void:   #050508;
+  --dark:   #08080f;
+  --card:   rgba(10,10,24,0.88);
+  --cyan:   #00f5ff;
+  --violet: #bf5fff;
+  --pink:   #ff2d78;
+  --blue:   #0080ff;
+  --t1: #e8eaf6;
+  --t2: #7986cb;
+  --t3: #3f4a7a;
+  --b1: rgba(0,245,255,0.18);
+  --b2: rgba(100,120,255,0.10);
+  --fd: 'Orbitron', sans-serif;
+  --fb: 'Rajdhani', sans-serif;
+  --fm: 'JetBrains Mono', monospace;
+}
+
+/* ── Reset ─────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--void);
+  color: var(--t1);
+  font-family: var(--fb);
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+::selection { background: rgba(0,245,255,0.22); }
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--void); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--cyan), var(--violet));
+  border-radius: 2px;
+}
+a { text-decoration: none; color: inherit; }
+
+/* ── Keyframes ─────────────────────────────────── */
+@keyframes blink   { 0%,100%{opacity:1} 50%{opacity:0} }
+@keyframes pulse   { 0%,100%{opacity:1;box-shadow:0 0 8px var(--cyan)} 50%{opacity:.5;box-shadow:0 0 3px var(--cyan)} }
+@keyframes float   { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+@keyframes spin    { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+@keyframes spinrev { from{transform:rotate(0deg)} to{transform:rotate(-360deg)} }
